@@ -1,0 +1,25 @@
+<p>
+  Name : {{ name }} <br />
+  Description : {{ description }}
+</p>
+
+<!-- property binding -->
+<button disabled="true">hard code</button>
+<br />
+<br />
+
+<!--Don't use hard code -->
+<button [disabled]="isbtn">dynamically</button>
+<br />
+<br />
+
+<!-- Event binding -->
+
+<input type="text" (input)="onChange($event)" />
+<br />
+<br />
+
+<!-- two way data binding and this syntax is banana in tha box"[(ngModel)]"  -->
+<h1>Two way Data Binding : {{ inputvalue }}</h1>
+
+<input type="text" [(ngModel)]="inputvalue" />
