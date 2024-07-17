@@ -1,0 +1,17 @@
+<form class="container" [formGroup]="loginForm">
+  <h4>please login</h4>
+  <input type="email" placeholder="email here" [formControl]="email" />
+  <h4 class="red text" [hidden]="email.valid || email.untouched">
+    enter correct email
+  </h4>
+  <input type="password" placeholder="password here" [formControl]="password" />
+  <h4 class="red text" [hidden]="password.valid || password.untouched">
+    password is required and must be greater then 6
+  </h4>
+  <button class="btn-green" [disabled]="loginForm.invalid" (click)="login()">
+    login
+  </button>
+  <button class="btn-red" (click)="reset()">Reset login</button>
+</form>
+<!-- <h1>email valid-{{ email.valid }}</h1>
+<h1>password untouched -{{ email.untouched }}</h1> -->
