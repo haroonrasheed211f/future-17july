@@ -1,13 +1,13 @@
 <form class="container" [formGroup]="loginForm">
   <h4>please login</h4>
   <input type="email" placeholder="email here" [formControl]="email" />
-  <h4 class="red text" [hidden]="email.valid || email.untouched">
+  <h5 class="red-text" [hidden]="email.valid || email.untouched">
     enter correct email
-  </h4>
+  </h5>
   <input type="password" placeholder="password here" [formControl]="password" />
-  <h4 class="red text" [hidden]="password.valid || password.untouched">
+  <h5 class="red-text" [hidden]="password.valid || password.untouched">
     password is required and must be greater then 6
-  </h4>
+  </h5>
   <button class="btn-green" [disabled]="loginForm.invalid" (click)="login()">
     login
   </button>
