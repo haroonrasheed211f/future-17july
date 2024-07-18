@@ -1,1 +1,307 @@
-<p>about works!</p>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+
+<div class="container-fluid bg-light">
+  <div class="row mb-3">
+    <div class="col-sm-12">
+      <button
+        type="button"
+        class="btn btn-primary active btn-sm border-bottom-0 border-dark border-1 rounded-top"
+      >
+        ENF
+      </button>
+      <button
+        type="button"
+        class="btn btn-light btn-sm border-dark border-1 rounded-top"
+      >
+        EST
+      </button>
+      <button
+        type="button"
+        class="btn btn-light btn-sm border-dark border-1 rounded-top"
+      >
+        SS
+      </button>
+      <button
+        type="button"
+        class="btn btn-light btn-sm border-dark border-1 rounded-top"
+      >
+        FIN
+      </button>
+    </div>
+    <hr />
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="row justify-content-start">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="defaultFOCWorker">Default FOC Worker</label>
+          <input
+            id="defaultFOCWorker"
+            formControlName="defaultFOCWorker"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="defaultCEUWorker">Default CEU Worker</label>
+          <input
+            id="defaultCEUWorker"
+            formControlName="defaultCEUWorker"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-start">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="pickupCode">Pickup Code</label>
+          <input
+            id="pickupCode"
+            formControlName="pickupCode"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="chargeCode">Charge Code</label>
+          <input
+            id="chargeCode"
+            formControlName="chargeCode"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-start">
+      <div class="col-3">
+        <div class="form-group">
+          <label for="warrantTypeEntryCode">Warrant Type Entry Code</label>
+          <input
+            id="warrantTypeEntryCode"
+            formControlName="warrantTypeEntryCode"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-group">
+          <label for="leinSupportIND">LEIN Support IND</label>
+          <select
+            id="leinSupportIND"
+            formControlName="leinSupportIND"
+            class="form-control"
+          >
+            <option value="">Select</option>
+            <option value="">yes</option>
+            <option value="">No</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-start">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="scbwAutoSCH">SCBW Auto SCH</label>
+          <input
+            id="scbwAutoSCH"
+            formControlName="scbwAutoSCH"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="scbwAutoSCHType">SCBW Auto SCH Type</label>
+          <input
+            id="scbwAutoSCHType"
+            formControlName="scbwAutoSCHType"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-start">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="scbwAutoSCHOut">SCBW Auto SCH Out</label>
+          <input
+            id="scbwAutoSCHOut"
+            formControlName="scbwAutoSCHOut"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="scbwAutoSCHMinWeeks">SCBW Auto SCH MinWeeks</label>
+          <input
+            id="scbwAutoSCHMinWeeks"
+            formControlName="scbwAutoSCHMinWeeks"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-start">
+      <div class="col-4">
+        <div class="form-group">
+          <label for="defaultParentingTimeBondAMT"
+            >Default Parenting Time Bond AMT</label
+          >
+          <input
+            id="defaultParentingTimeBondAMT"
+            formControlName="defaultParentingTimeBondAMT"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="splitEventDefaultSpacing"
+            >Split Event Default Spacing</label
+          >
+          <input
+            id="splitEventDefaultSpacing"
+            formControlName="splitEventDefaultSpacing"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="defaultAppearanceBondAMT"></label>
+          <select
+            id="defaultAppearanceBondAMT"
+            formControlName="defaultAppearanceBondAMT"
+            class="form-control"
+          >
+            <option value="">Select</option>
+            <option value="">yes</option>
+            <option value="">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="row justify-content-start">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="defaultAppearanceBondAMT"
+              >Default Appearance Bond AMT</label
+            >
+            <input
+              id="defaultAppearanceBondAMT"
+              formControlName="defaultAppearanceBondAMT"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="imageDocumentsFTPId">Image Documents FTP Id</label>
+            <input
+              id="imageDocumentsFTPId"
+              formControlName="imageDocumentsFTPId"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-start">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="defaultAppearanceBondPercent"
+              >Default Appearance Bond Percent</label
+            >
+            <input
+              id="defaultAppearanceBondPercent"
+              formControlName="defaultAppearanceBondPercent"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="imageDocumentsFTPServer"
+              >Image Documents FTPServer</label
+            >
+            <input
+              id="imageDocumentsFTPServer"
+              formControlName="imageDocumentsFTPServer"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-start">
+        <div class="col-4">
+          <div class="form-group">
+            <label for=" courtOriginatingAgency">
+              Court Originating Agency</label
+            >
+            <input
+              id=" courtOriginatingAgency"
+              formControlName=" courtOriginatingAgency"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for=" password"> Password</label>
+            <input
+              id=" password"
+              formControlName=" password"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-start">
+        <div class="col-4">
+          <div class="form-group">
+            <label for=" defaultLaboratoryID"> Default Laboratory ID</label>
+            <input
+              id=" defaultLaboratoryID"
+              formControlName=" defaultLaboratoryID"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="path">Path</label>
+            <input id="path" formControlName="path" class="form-control" />
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-start">
+        <div class="col-4">
+          <div class="form-group">
+            <label for=" benchWarrantRemarks"> Bench Warrant Remarks</label>
+            <input
+              id=" benchWarrantRemarks"
+              formControlName=" benchWarrantRemarks"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <label for="iwnText">Iwn Text</label>
+            <input
+              id="iwnText"
+              formControlName="iwnText"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
